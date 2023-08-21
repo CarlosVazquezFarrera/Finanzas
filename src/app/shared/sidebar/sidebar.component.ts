@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { dashboardRoutesKey } from 'src/app/dashboard/dashboard.routes';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  public get detalleUrl(): string {
+    return `/${dashboardRoutesKey.detalle}`;
+  }
+  public get movimientosUrl(): string {
+    return `/${dashboardRoutesKey.movimientos}`;
+  }
 }
